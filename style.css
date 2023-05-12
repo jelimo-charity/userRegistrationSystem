@@ -104,6 +104,7 @@ button{
 .delete{
     background-color: red;
     padding-left: 10px;
+    margin-left: 10px;
     border-radius: 3px;
 }
 table{
