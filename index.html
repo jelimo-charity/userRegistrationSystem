@@ -17,27 +17,33 @@
           
             <div class="form">
                 <h2>Register Yourself Now</h2>
-                <form action="">
+                <form onsubmit= "event.preventDefault(); submitData();" autocomplete="off">
                     <h3>Enter UserName:</h3>
-                    <input type="text" name="username" placeholder="Username:" required><br>
+                    <input type="text" name="username" id="username" placeholder="Username:" required><br>
                     <h3>Enter your Identification Number:</h3>
-                    <input type="number" name="idNumber" placeholder="Identification Number:" required><br>
+                    <input type="number" name="idNumber" id="idnumber" placeholder="Identification Number:" required><br>
                     <h3>Enter your Language!</h3>
-                    <input type="text" name="language" placeholder="Language" required>
+                    <input type="text" name="language" id="language" placeholder="Language" required>
                     <h3>Select your country:</h3>
-                    
-                    <div class="country">
-                          
-                        <select name="country" id="country" required>
-                            <option value="kenya">Kenya</option>
-                            <option value="Tanzania">Tanzania</option>
-                            <option value="Uganda">Uganda</option>
-                        </select>
-                    </div>
-                    <div class="btn">
-                        <button id="submitBtn">Submit</button>
+                    <select name="country" id="country" required>
+                        <option value="kenya">Kenya</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="Uganda">Uganda</option>
+                    </select>
+                    <div class="btns">
+                        <input type="Submit" value="Add User">
 
                     </div>
+                   
+                    
+                    <!-- <div class="country">
+                          
+                        
+                    </div> -->
+                    <!-- <div class="btn" onclick="submitData()">
+                        <button id="submitBtn">Submit</button>
+
+                    </div> -->
                   
                   
                 </form>
@@ -45,50 +51,22 @@
         </div>
         <div class="userDetails">
             <h2>Check Your Details Here!</h2>
-            <div class="details">
-                <table>
-                    <th>Username</th>
-                    <th>Id_Number</th>
-                    <th>Country</th>
-                    <th>Language</th>
-                    <th></th>
-                    <th></th>
-                    <tr>
-                        <td>Joy</td>
-                        <td>123</td>
-                        <td>kenya</td>
-                        <td>english</td>
-                        <td class="update">Update</td>
-                        <td class="delete">Delete</td>
-    
-                    </tr>
-                    <tr>
-                        <td>Joy</td>
-                        <td>123</td>
-                        <td>kenya</td>
-                        <td>english</td>
-                        <td class="update">Update</td>
-                        <td class="delete">Delete</td>
-    
-                    </tr>
-                    <tr>
-                        <td>Joy</td>
-                        <td>123</td>
-                        <td>kenya</td>
-                        <td>english</td>
-                        <td class="update">Update</td>
-                        <td class="delete">Delete</td>
-    
-                    </tr>
-                    <tr>
-                        <td>Joy</td>
-                        <td>123</td>
-                        <td>kenya</td>
-                        <td>english</td>
-                        <td class="update">Update</td>
-                        <td class="delete">Delete</td>
-    
-                    </tr>
+            <div id="details">
+                <table id="userList">
+                    <thead>
+                        <th>Username</th>
+                        <th>Id_Number</th>
+                        <th>Country</th>
+                        <th>Language</th>
+                        <th></th>
+
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                   
+                   
+                    
                    
                 </table>
             </div>
@@ -101,6 +79,7 @@
             
 
     </div>
+    <script src="script.js"></script>
 
     
 </body>
