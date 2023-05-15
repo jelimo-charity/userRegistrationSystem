@@ -34,7 +34,7 @@ resetForm();
     cell4.innerHTML = data.country; 
     cell5 = newRow.insertCell(4);
     cell5.innerHTML = `<a onClick="updateBtn(this)">Update</a>
-                        <a>Delete</a>`;
+                        <a onClick="deleteData(this)">Delete</a>`;
 
  }
 
@@ -58,8 +58,8 @@ resetForm();
   //Delete data
   function deleteData(td){
     if( confirm( 'Are you sure you want to delete the user data?')){
-        rowDeleted = td.parentElement.parentElement;
-        document.getElementById('userList').deleteRow(rowDeleted.rowDeletedIndex);
+        row = td.parentElement.parentElement;
+        document.getElementById('userList').deleteRow(row.rowIndex);
         resetForm(); 
 
     }
